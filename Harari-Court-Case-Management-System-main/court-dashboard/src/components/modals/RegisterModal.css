@@ -1,0 +1,188 @@
+.register-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.register-modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 25px 30px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-modal-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.register-modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.register-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.register-modal-body {
+  padding: 30px;
+}
+
+.register-form .form-group {
+  margin-bottom: 25px;
+}
+
+.register-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.register-form .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s;
+  background: #f8fafc;
+}
+
+.register-form .form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+.register-form .form-group input::placeholder {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.register-form .form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.register-form .btn-cancel,
+.register-form .btn-submit {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.register-form .btn-cancel {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 2px solid #e2e8f0;
+}
+
+.register-form .btn-cancel:hover {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.register-form .btn-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.register-form .btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.register-form .btn-submit:active {
+  transform: translateY(0);
+}
+
+.terms-agreement {
+  text-align: center;
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+@media (max-width: 576px) {
+  .register-modal {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .register-modal-header {
+    padding: 20px;
+  }
+
+  .register-modal-body {
+    padding: 20px;
+  }
+
+  .register-form .form-actions {
+    flex-direction: column;
+  }
+
+  .register-form .btn-cancel,
+  .register-form .btn-submit {
+    width: 100%;
+  }
+}

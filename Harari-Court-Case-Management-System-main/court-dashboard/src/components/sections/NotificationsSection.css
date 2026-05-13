@@ -1,0 +1,114 @@
+.notifications-section {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-section h3 {
+  color: #2d3748;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notifications-section h3::before {
+  content: "🔔";
+  font-size: 1.1rem;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s;
+}
+
+.notification-item:hover {
+  background: white;
+  border-color: #cbd5e0;
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-content p {
+  margin: 0 0 5px 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.notification-time {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.notification-time::before {
+  content: "🕒";
+  font-size: 0.7rem;
+}
+
+/* Notification type specific colors */
+.notification-item[data-type="hearing"] .notification-icon {
+  color: #4299e1;
+  background: #ebf8ff;
+}
+
+.notification-item[data-type="document"] .notification-icon {
+  color: #48bb78;
+  background: #f0fff4;
+}
+
+.notification-item[data-type="payment"] .notification-icon {
+  color: #ed8936;
+  background: #fffaf0;
+}
+
+.notification-item[data-type="message"] .notification-icon {
+  color: #9f7aea;
+  background: #faf5ff;
+}
+
+@media (max-width: 768px) {
+  .notification-item {
+    padding: 12px;
+  }
+  
+  .notification-content p {
+    font-size: 0.9rem;
+  }
+}

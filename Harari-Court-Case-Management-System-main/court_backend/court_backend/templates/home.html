@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harari Supreme Court</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --primary: #235467;
+            --accent: #FFD166;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: var(--primary);
+            background: var(--white);
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: var(--white);
+            border-bottom: 1px solid rgba(35, 84, 103, 0.1);
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .admin-btn {
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            background: #FFD166;
+            color:var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity .2s ease;
+        }
+
+        .admin-btn:hover {
+            opacity: 0.85;
+        }
+
+        /* HERO */
+        .hero {
+            height: 90vh;
+            background:
+                linear-gradient(rgba(35,84,103,.9), rgba(35,84,103,.9)),
+                url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f")
+                center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            display: block;
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-top: .5rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* SERVICES */
+        .services {
+            padding: 4rem 1.5rem;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .services-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            border: 1px solid rgba(35,84,103,.15);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* ABOUT */
+        .about {
+            background: rgba(35,84,103,.05);
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-content">
+        <div class="logo">⚖️ Harari Court</div>
+        <a href="/admin/" class="admin-btn">Admin</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            የሀረሪ ክልል ጠቅላይ ፍርድ ቤት
+            <span>Harari Region Supreme Court</span>
+        </h1>
+
+        <p>
+            We strive for efficient, transparent, and accessible judicial
+            services through digital innovation.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <h2>Digital Court Services</h2>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Case Filing</h3>
+            <p>Submit court cases electronically.</p>
+        </div>
+        <div class="service-card">
+            <h3>Case Tracking</h3>
+            <p>Track case progress in real time.</p>
+        </div>
+        <div class="service-card">
+            <h3>Judgment Access</h3>
+            <p>Access court decisions online.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About the Court</h2>
+    <p>
+        The Harari Region Supreme Court is committed to justice, integrity,
+        and efficiency by embracing modern digital systems to serve citizens better.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Harari Court Case Management System</p>
+    <p>Digital Justice for All</p>
+</footer>
+
+</body>
+</html>
